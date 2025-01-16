@@ -29,12 +29,12 @@ Laundery management system is a web-based platform designed to streamline the pr
 
 ### Features
 * **Authentication and Authorization:**
-    * Register or log in as a user or agency.
-    * Login & Register with JWT
+    * Register or log in as a user or Admin.
+    * Login & Register
 
 * **Property Assessment.:**
-    * View all homes(appartment & house) on a map.
-    * Clicking on a building icon opens a detailed modal.
+    * View all services.
+    * Clicking bloge button  on the heading it will shaw user or Admin buttons .
 
 * **Property Search and Filtering:**
     * Search for properties using the search input.
