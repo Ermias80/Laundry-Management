@@ -1,0 +1,756 @@
+/* Header and Navigation */
+header {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #3d3d5c);
+    color: #fff;
+    z-index: 1000;
+}
+
+.header-area .main-header {
+    background-color: #b6c8e3; /* White background */
+    border-bottom: 1px solid #5f2525; /* Optional: Add a light border */
+    display: flex;
+    justify-content: space-between;
+    
+   
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main Navigation Menu */
+.main-menu nav ul {
+    display: flex;
+    gap: 60px; /* Space between menu items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu nav ul li a {
+    color: #000; /* Black text color */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s; /* Smooth hover effect */
+}
+
+.main-menu nav ul li a:hover {
+    color: #ff9800; /* Highlight color */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+
+.header-right a {
+    color: #000; /* Black text color */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.header-right a:hover {
+    background-color: #eeeef4; /* Light background */
+    color: #982020; /* Highlight text */
+}
+
+
+.logo img {
+    max-width: 200px; /* Responsive logo size */
+    height: auto;
+}
+
+.menu-wrapper {
+    margin-left: 20px;
+}
+
+/* Submenu Styling */
+nav ul li {
+    position: relative; /* For submenu positioning */
+}
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6060cb; /* Submenu background */
+    padding: 10px 20px;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+nav ul li .submenu li {
+    padding: 5px 0; /* Vertical spacing */
+}
+
+nav ul li .submenu li a {
+    color: #fff; /* Submenu text color */
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li .submenu li a:hover {
+    color: #ff9800; /* Highlight on hover */
+}
+
+nav ul li:hover .submenu {
+    display: block; /* Show submenu */
+    opacity: 1;
+}
+
+
+/* Optional: Ensure Parent Container Allows Alignment */
+.header-area .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Space on the left and right */
+}
+
+/* General Section Styling */
+.services-area {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.section-tittle {
+    margin-bottom: 55px;
+}
+
+.section-tittle .element {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-tittle h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #f9f9f9;
+}
+
+/* Slider Area */
+.slider-area {
+    
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.4), 
+            rgba(0, 0, 0, 0.4)
+        ), 
+        url('/assets/img/gallery/L1.jpg') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.hero-overly {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.slider-active {
+    position: relative;
+    height: 100%;
+}
+
+.single-slider {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero__caption {
+    color: #fff;
+    text-align: left;
+    max-width: 600px;
+}
+
+.hero__caption h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.hero__caption p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ddd;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    animation: fadeInLeft 2s ease-in-out;
+}
+
+.hero-btn:hover {
+    background-color: #ff4747;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero__caption h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero__caption p {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero__caption h1 {
+        font-size: 2rem;
+    }
+
+    .hero__caption p {
+        font-size: 0.9rem;
+    }
+
+    .hero-btn {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Slider Height for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .slider-area {
+        height: 80vh;
+    }
+
+    .hero__caption h1 {
+        font-size: 32px;
+    }
+
+    .hero__caption p {
+        font-size: 16px;
+    }
+
+    .hero__caption .hero-btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+/* Fade-in Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+/* Style for centering the entire login-container */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh; /* Full height of the viewport */
+    background-color: #f0f0f0;
+    flex-direction: column; /* Arrange children vertically */
+}
+
+
+/* Style for the header */
+.login-container header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Centered content */
+.login-container form {
+    background-color: white;
+    padding: 65px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column; /* Arrange form elements vertically */
+}
+
+/* Style for the input-box */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Style for the input fields */
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    padding-left: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+/* Style for the input fields on focus */
+.input-field:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+/* Style for the icons inside the input-box */
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+
+/* Style for the submit button */
+.submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for the submit button on hover */
+.submit:hover {
+    background-color: #0056b3;
+}
+
+/* General Styles */
+.two-col {
+    display: flex;
+    justify-content: space-between; /* Space between the two columns */
+    align-items: center; /* Align items vertically */
+    margin: 20px 0; /* Add some margin above and below */
+    font-family: 'Poppins', sans-serif; /* Optional, for better aesthetics */
+}
+
+/* Styles for the first column */
+.two-col .one {
+    display: flex;
+    align-items: center;
+}
+
+/* Checkbox and Label Styles */
+.two-col .one input[type="checkbox"] {
+    margin-right: 8px; /* Space between the checkbox and label */
+}
+
+.two-col .one label {
+    font-size: 14px;
+    color: #555; /* Neutral text color */
+}
+
+/* Styles for the second column */
+.two-col .two {
+    text-align: right; /* Align the link to the right */
+}
+
+/* Link Styles */
+.two-col .two .link {
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Default link color (blue) */
+    font-size: 14px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.two-col .two .link:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+/* Style for the Sign Up link */
+.login-container .top a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Style for the Sign Up link on hover */
+.login-container .top a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Center alignment for the text */
+.login-container .top span {
+    font-size: 14px;
+    color: #5918c1;
+    
+}
+
+
+/* Style for centering the entire register-container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0f0f0;
+    flex-direction: column; /* Arrange children vertically */
+}
+
+/* Style for the top section of the form */
+.register-container .top {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+/* Style for the header */
+.register-container header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0f0f0f;
+    margin-bottom: 30px;
+}
+
+/* Centered content */
+.register-container form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column; /* Arrange form elements vertically */
+}
+
+/* Style for the input-box */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Style for the input fields */
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    padding-left: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+/* Style for the input fields on focus */
+.input-field:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+/* Style for the icons inside the input-box */
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+
+/* Style for the submit button */
+.submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for the submit button on hover */
+.submit:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the two-column section */
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    flex-direction: row; /* Arrange two-column items horizontally */
+}
+
+/* Style for the one section in two-column */
+.two-col .one {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the checkbox */
+.two-col .one input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Style for the link in the two-column section */
+.two-col .two a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Style for the link on hover */
+.two-col .two a:hover {
+    text-decoration: underline;
+}
+
+/* Style for the Login link */
+.register-container .top a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-bottom: 100px;
+}
+
+/* Style for the Login link on hover */
+.register-container .top a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Center alignment for the text */
+.register-container .top span {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Style for the two-forms container */
+.two-forms {
+    display: flex;
+    flex-direction: column; /* Arrange the two forms vertically */
+}
+
+/* Style for the two input-box elements inside two-forms */
+.two-forms .input-box {
+    margin-bottom: 20px;
+}
+
+/* Common Container Styles */
+.login-container, .register-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding: 20px; /* Internal spacing */
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Set a maximum width */
+    margin: 20px auto; /* Center on the page */
+}
+
+/* Styling for the "Top" Section */
+.login-container .top, .register-container .top {
+    text-align: center; /* Center align text */
+    margin-bottom: 10px; /* Space between the top section and the rest */
+}
+
+/* Span and Link Styles */
+.login-container .top span, .register-container .top span {
+    font-size: 14px; /* Small, readable text */
+    color: #555; /* Neutral text color */
+    margin-bottom: 20px; /* Space below the span */
+}
+
+.login-container .top span a, .register-container .top span a {
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Link color */
+    font-weight: bold; /* Emphasize link text */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.login-container .top span a:hover, .register-container .top span a:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+
+
+/* Distinct Background Colors for Containers (Optional) */
+.login-container {
+    background-color: #e8f4fd; /* Light blue for Login */
+}
+
+.register-container {
+    background-color: #fce8f1; /* Light pink for Register */
+}
+
+.top h2 {
+    color: #333; /* Change to desired color for the h1 text */
+}
+
+#services {
+    margin-bottom: 2rem;
+}
+
+#services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+#services-list div {
+    padding: 1rem;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#services-list div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Order form styling */
+#order-form {
+    padding: 1rem;
+    background: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Form inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 50%;
+    box-sizing: border-box;
+    background: #fff;
+    transition: border-color 0.2s;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button */
+form button {
+    padding: 0.75rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+    background: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    #services-list {
+        grid-template-columns: 1fr;
+    }
+}
