@@ -76,15 +76,12 @@ To clone Your Home locally, follow these steps:
 
 2\. **Navigate to the project repository:**
 
-* `cd Your-home`
+* `cd Laundry-Management`
 
 #### Quick Start
 
 To run and access fullstack application:
 
-* **Navigate to server side diroctory and run:**
-    * `cd server-side`
-    * `npm start`
 
 * **Access the application:**
     * Open your web browser and go to `http://localhost:1245/`
