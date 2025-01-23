@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Order</title>
+    <link rel="stylesheet" href="assets/CSS/NCSS.css"> <!-- Link to your CSS -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <!-- Logo -->
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="Company Logo"></a>
+                    </div>
+                    <div class="menu-wrapper d-flex align-items-center">
+                        <!-- Main-menu -->
+                        <div class="main-menu d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="services.html">Services</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right d-none d-lg-block">
+                    <a href="#" class="header-btn1"><img src="assets/img/icon/call.png" alt="Call Icon"> (+251) 9 43 03 23 43</a>
+                </div>
+            </div>
+        </div>
+        <h1>Welcome,</h1>
+        <nav>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Choose Your Order</h2>
+
+        <!-- List of available services -->
+        <section id="services">
+            <h3>Available Services</h3>
+            <div id="services-list"></div>
+        </section>
+
+        <!-- Order form -->
+        <section id="order-form">
+            <h3>Place Your Order</h3>
+            <form id="orderForm">
+                <label for="service">Select services:</label>
+                <select id="service" name="service" required>
+                    <!-- Options will be populated dynamically -->
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+
+        <!-- Order display board -->
+        <section id="order-display">
+            <h3>Order Summary</h3>
+            <div id="order-summary">
+                <p>No orders placed yet.</p>
+            </div>
+        </section>
+
+        <!-- Payment section -->
+        <section id="payment">
+            <h3>Payment Options</h3>
+            <form id="paymentForm">
+                <label for="payment-method">Select Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="">-- Select Payment Method --</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">TeleBirr</option>
+                </select>
+
+                <button type="submit">Proceed to Payment</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+         <!-- Footer Start-->
+         <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                     <div class="single-footer-caption mb-50">
+                       <div class="single-footer-caption mb-30">
+                        <!-- logo -->
+                        <div class="footer-logo mb-35">
+                            <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt="Footer Logo"></a>
+                        </div>
+                        <div class="footer-tittle">
+                            <div class="footer-pera">
+                                <p>We handle the washing, folding, and delivery, so you can enjoy your free time.</p>
+                            </div>
+                        </div>
+                        <!-- social -->
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                <div class="single-footer-caption mb-50">
+                    <div class="footer-tittle">
+                        <h4>Services </h4>
+                        <ul>
+                            <li><a href="#"> Dry Cleaning</a></li>
+                            <li><a href="#"> Dry Clean</a></li>
+                            <li><a href="#"> Ironing Services</a></li>
+                            <li><a href="#"> Laundry Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                <div class="single-footer-caption mb-50">
+                    <div class="footer-tittle">
+                        <h4>Get in touch</h4>
+                        <ul>
+                            <li class="number"><a href="#">(+251) 9 43 03 23 43</a></li>
+                            <li><a href="#">E-Laundery</a></li>
+                            <li><a href="#">1000/A, Zewuditu road NYC-9089</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer-bottom area -->
+    <div class="container">
+        <div class="footer-border">
+           <div class="row d-flex align-items-center">
+               <div class="col-xl-12 ">
+                   <div class="footer-copy-right text-center">
+                       <p>
+                          
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+   <script>
+       document.addEventListener('DOMContentLoaded', () => {
+            const servicesListDiv = document.getElementById('services-list');
+            const serviceSelect = document.getElementById('service');
+            const orderSummaryDiv = document.getElementById('order-summary');
+            const orderForm = document.getElementById('orderForm');
+            let orderDetails = null;
+
+           function displayError(message) {
+               servicesListDiv.innerHTML = `<p class="error">${message}</p>`;
+           }
+
+           //Fetch services from the backend API
+            fetch('/services')
+                .then(response => {
+                    if (!response.ok) {
+                       throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                     return response.json();
+                 })
+                .then(services => {
+                    if (!services || services.length === 0) {
+                       displayError("No services available at the moment.");
+                       return;
+                    }
+                  servicesListDiv.innerHTML = '';
+                  services.forEach(service => {
+                        const serviceDiv = document.createElement('div');
+                        serviceDiv.classList.add('service');
+                        serviceDiv.innerHTML = `
+                            <h4>${service.name}</h4>
+                             <p><strong>Price:</strong> $${service.price}</p>
+                        `;
+                        servicesListDiv.appendChild(serviceDiv);
+
+                        const option = document.createElement('option');
+                        option.value = service.id;
+                        option.textContent = `${service.name} ($${service.price})`;
+                        serviceSelect.appendChild(option);
+                    });
+
+                 })
+                .catch(error => {
+                    console.error('Error fetching services:', error);
+                   displayError('Failed to load services. Please try again later.');
+
+                 });
+
+                orderForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const serviceId = serviceSelect.value;
+                    const quantity = document.getElementById('quantity').value;
+                    const selectedOption = serviceSelect.options[serviceSelect.selectedIndex];
+                    const serviceName = selectedOption.textContent;
+                     
+                     fetch(`/services/${serviceId}`)
+                        .then(response => {
+                               if (!response.ok) {
+                                   throw new Error(`HTTP error! status: ${response.status}`);
+                               }
+                            return response.json();
+                         })
+                        .then(service => {
+
+                        orderDetails = {
+                            service: serviceName,
+                            quantity: parseInt(quantity,10),
+                            totalPrice: service.price * quantity
+                         }
+
+                        orderSummaryDiv.innerHTML = `
+                           <p><strong>Service:</strong> ${orderDetails.service}</p>
+                            <p><strong>Quantity:</strong> ${orderDetails.quantity}</p>
+                            <p><strong>Total Price:</strong> $${orderDetails.totalPrice}</p>
+                        `;
+                       document.getElementById('payment').scrollIntoView({ behavior: 'smooth' });
+                    })
+                    .catch(error => {
+                            console.error('Error fetching service details:', error);
+                             displayError('Failed to fetch service details. Please try again later.');
+                         });
+             
+                 });
+             document.getElementById('paymentForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const paymentMethod = document.getElementById('payment-method').value;
+
+                 if (!orderDetails) {
+                    alert("Please place an order first.");
+                     return;
+                    }
+                   alert(`Payment of $${orderDetails.totalPrice} using ${paymentMethod} is successful`)
+                    orderSummaryDiv.innerHTML = "<p>Order placed successfully!</p>";
+                    orderDetails = null;
+                 });
+       });
+   </script>
+</body>
+</html>
