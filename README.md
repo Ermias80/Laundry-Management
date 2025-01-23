@@ -72,7 +72,7 @@ To clone Your Home locally, follow these steps:
 
 1\. **Clone the repository:**
 
-* `git clone https://github.com/mahari9/Your-home.git`
+* `git clone https://github.com/Ermias80/Laundry-Management`
 
 2\. **Navigate to the project repository:**
 
