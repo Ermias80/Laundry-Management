@@ -46,7 +46,7 @@ def register():
             cursor.close()
             conn.close()
 
-    return render_template('register.html')
+    return render_template('sign_up.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -69,7 +69,7 @@ def login():
         else:
             flash('Invalid email or password.', 'error')
 
-    return render_template('login.html')
+    return render_template('sign_in.html')
 
 @app.route('/dashboard')
 def dashboard():
