@@ -1,9 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
+import re
+import secrets
+import os
+
 
 app = Flask(__name__, template_folder='template')
 app.secret_key = ''
+app.secret_key = os.environ.get('SECRET_KEY', 'default_secret_key')
+
 
 # MySQL Configuration
 db_config = {
@@ -37,29 +43,51 @@ def admin():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        first_name = request.form['first_name']
-        last_name = request.form['last_name']
-        email = request.form['email']
-        password = request.form['password']
+        # Retrieve form data
+        first_name = request.form.get('firstname')
+        last_name = request.form.get('lastname')
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        # Validate input
+        if not all([first_name, last_name, email, password]):
+            flash('All fields are required.', 'error')
+            return render_template('sign_up.html')
+
+        if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+            flash('Invalid email address.', 'error')
+            return render_template('sign_up.html')
+
+        if len(password) < 8 or not re.search(r'[A-Z]', password) or not re.search(r'[0-9]', password):
+            flash('Password must be at least 8 characters long and include at least one uppercase letter and one number.', 'error')
+            return render_template('sign_up.html')
+
+        # Hash the password
         hashed_password = generate_password_hash(password)
 
-        conn = get_db_connection()
-        cursor = conn.cursor()
-
+        # Save to database
         try:
+            conn = get_db_connection()
+            cursor = conn.cursor()
             cursor.execute(
                 "INSERT INTO user (first_name, last_name, email, password) VALUES (%s, %s, %s, %s)",
                 (first_name, last_name, email, hashed_password)
             )
             conn.commit()
             flash('Registration successful! Please log in.', 'success')
+            
+            # Redirect to login form after registration
             return redirect(url_for('login'))
         except mysql.connector.IntegrityError:
             flash('Email is already registered. Please log in.', 'error')
+        except mysql.connector.Error as e:
+            flash(f"An error occurred: {str(e)}", 'error')
         finally:
-            cursor.close()
-            conn.close()
-
+            if 'cursor' in locals():
+                cursor.close()
+            if 'conn' in locals():
+                conn.close()
+    # Render the registration page
     return render_template('sign_up.html')
 
 @app.route('/login', methods=['GET', 'POST'])
