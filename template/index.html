@@ -7,24 +7,33 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
-<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/NCSS.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/NCSS.css') }}">
 
 <!-- CSS here -->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/slicknav.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">  
-<link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/slick.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slick.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+    /* Custom styles to add padding and ensure header is fixed */
+    body {
+        padding-top: 100px; /* Adjust according to header height */
+    }
+    .header-area {
+        background-color: #ffffff; /* Set background color for the fixed header */
+        box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1); /* Optional shadow for header */
+    }
+</style>
 </head>
 <body>
     <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
         <div class="header-area">
-            <div class="main-header header-sticky">
+            <div class="main-header header-sticky navbar navbar-expand-lg fixed-top">
                 <!-- Logo -->
                 <div class="header-left">
                     <div class="logo">
@@ -34,26 +43,28 @@
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav> 
-                                <ul id="navigation">                                                                                          
-                                    <li class="active"><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href=>Blog</a>
+                                <ul id="navigation" class="navbar-nav mr-auto">
+                                    <li class="nav-item active"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url_for('services') }}">Services</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a>
                                         <ul class="submenu">
-                                            <li><a href="Admin.html">Admin</a></li>
-                                            <li><a href="sign_in.html">User</a></li>
+                                            <li><a href="{{ url_for('admin') }}">Admin</a></li>
+                                            <li><a href="{{ url_for('login') }}">User</a></li>
                                         </ul>
                                     </li>
                                 </ul>
+                                                           
+                                    </li>
+                                </ul>
                             </nav>
-                            <div id="contentContainer"></div>
                         </div>
                     </div>
                 </div>
                 <div class="header-right d-none d-lg-block">
                     <a href="#" class="header-btn1"><img src="static/img/icon/call.png" alt=""> (+251) 9 43 03 23 43</a>
-                    <a href="#" class="btn white-btn" id="loginBtn" onclick="redirectToSignIn()">Sign In</a>
-                </div>
+                    <a href="{{ url_for('login') }}" class="btn white-btn" id="loginBtn">Sign In</a>   
+                </div>  
             </div>
         </div>
         <!-- Header End --->
