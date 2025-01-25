@@ -6,13 +6,13 @@
     <title>E-Laundry | management</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <link rel="stylesheet" href="assets/CSS/NCSS.css">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/NCSS.css') }}">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/CSS/style.css"
+     <!-- CSS here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
  
 
     <style>
@@ -36,24 +36,24 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                        <a href="index.html"><img src="static/img/logo/logo.png" alt=""></a>
                     </div>
                     <div class="menu-wrapper d-flex align-items-center">
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav> 
-                                <ul id="navigation" class="navbar-nav mr-auto">                                                                                          
-                                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                                    
+                                <ul id="navigation" class="navbar-nav mr-auto">
+                                    <li class="nav-item active"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url_for('services') }}">Services</a></li>
                                 </ul>
+                                
                             </nav>
                         </div>
                     </div>
                 </div>
                 <div class="header-right d-none d-lg-block">
-                    <a href="#" class="header-btn1"><img src="assets/img/icon/call.png" alt=""> (+251) 9 43 03 23 43</a>   
+                    <a href="#" class="header-btn1"><img src="static/img/icon/call.png" alt=""> (+251) 9 43 03 23 43</a>   
                 </div>  
             </div>
         </div>
@@ -101,7 +101,7 @@
                <div class="single-footer-caption mb-30">
                 <!-- logo -->
                 <div class="footer-logo mb-35">
-                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                    <a href="index.html"><img src="static/img/logo/logo2_footer.png" alt=""></a>
                 </div>
                 <div class="footer-tittle">
                     <div class="footer-pera">
