@@ -6,14 +6,17 @@
     <title>E-Laundry | management</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <link rel="stylesheet" href="assets/css/NCSS.css">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/NCSS.css') }}">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
+<!-- CSS here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slick.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <style>
         /* Custom styles to add padding and ensure header is fixed */
         body {
@@ -41,11 +44,10 @@
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav> 
-                                <ul id="navigation" class="navbar-nav mr-auto">                                                                                          
-                                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                                    
+                                <ul id="navigation" class="navbar-nav mr-auto">
+                                    <li class="nav-item active"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url_for('services') }}">Services</a></li>
                                 </ul>
                             </nav>
                         </div>
