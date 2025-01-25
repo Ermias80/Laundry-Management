@@ -6,41 +6,42 @@
     <title>E-Laundry | management</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <link rel="stylesheet" href="assets/CSS/NCSS.css">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/NCSS.css') }}">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">  
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+<!-- CSS here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slick.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
 <body>
     <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
         <div class="header-area">
-            <div class="main-header header-sticky">
+            <div class="main-header header-sticky navbar navbar-expand-lg fixed-top">
                 <!-- Logo -->
                 <div class="header-left">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                        <a href="index.html"><img src="static/img/logo/logo.png" alt=""></a>
                     </div>
                     <div class="menu-wrapper d-flex align-items-center">
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav> 
-                                <ul id="navigation">                                                                                          
-                                    <li class="active"><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href=>Blog</a>
+                                <ul id="navigation" class="navbar-nav mr-auto">
+                                    <li class="nav-item active"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ url_for('services') }}">Services</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Blog</a>
                                         <ul class="submenu">
-                                            <li><a href="Admin.html">Admin</a></li>
-                                            <li><a href="user.html">User</a></li>
+                                            <li><a href="{{ url_for('admin') }}">Admin</a></li>
+                                            <li><a href="{{ url_for('login') }}">User</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -49,8 +50,8 @@
                     </div>
                 </div>
                 <div class="header-right d-none d-lg-block">
-                    <a href="#" class="header-btn1"><img src="assets/img/icon/call.png" alt=""> (+251) 9 43 03 23 43</a>
-                    <a href="#" class="btn white-btn" id="loginBtn" onclick="redirectToSignIn()">Sign In</a>
+                    <a href="#" class="header-btn1"><img src="static/img/icon/call.png" alt=""> (+251) 9 43 03 23 43</a>
+                    <a href="{{ url_for('login') }}" class="btn white-btn" id="loginBtn">Sign In</a>
                 </div>
 
                 
@@ -65,7 +66,7 @@
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
-                        <img src="assets/img/gallery/about1.jpg" alt="">
+                        <img src="static/img/gallery/about1.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
@@ -98,7 +99,7 @@
                        <div class="single-footer-caption mb-30">
                         <!-- logo -->
                         <div class="footer-logo mb-35">
-                            <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                            <a href="index.html"><img src="static/img/logo/logo2_footer.png" alt=""></a>
                         </div>
                         <div class="footer-tittle">
                             <div class="footer-pera">
@@ -171,48 +172,54 @@
 </div>
 
 <!-- JS here -->
-<script src="assets/js/index.js"></script>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendor/modernizr-3.5.0.min.js') }}"></script>
 
-<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
-<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="./assets/js/popper.min.js"></script>
-<script src="./assets/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='js/vendor/jquery-1.12.4.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
 <!-- Jquery Mobile Menu -->
-<script src="./assets/js/jquery.slicknav.min.js"></script>
+<script src="{{ url_for('static', filename='js/jquery.slicknav.min.js') }}"></script>
+
 
 <!-- Jquery Slick , Owl-Carousel Plugins -->
-<script src="./assets/js/owl.carousel.min.js"></script>
-<script src="./assets/js/slick.min.js"></script>
+<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+
 <!-- One Page, Animated-HeadLin -->
-<script src="./assets/js/wow.min.js"></script>
-<script src="./assets/js/animated.headline.js"></script>
-<script src="./assets/js/jquery.magnific-popup.js"></script>
+<script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/animated.headline.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.magnific-popup.js') }}"></script>
+
 
 <!-- Date Picker -->
-<script src="./assets/js/gijgo.min.js"></script>
+<script src="{{ url_for('static', filename='js/gijgo.min.js') }}"></script>
+
 <!-- Nice-select, sticky -->
-<script src="./assets/js/jquery.nice-select.min.js"></script>
-<script src="./assets/js/jquery.sticky.js"></script>
+<script src="{{ url_for('static', filename='js/jquery.nice-select.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+
 <!-- Progress -->
-<script src="./assets/js/jquery.barfiller.js"></script>
+<script src="{{ url_for('static', filename='js/jquery.barfiller.js') }}"></script>
 
 <!-- counter , waypoint,Hover Direction -->
-<script src="./assets/js/jquery.counterup.min.js"></script>
-<script src="./assets/js/waypoints.min.js"></script>
-<script src="./assets/js/jquery.countdown.min.js"></script>
-<script src="./assets/js/hover-direction-snake.min.js"></script>
+<script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.countdown.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/hover-direction-snake.min.js') }}"></script>
 
 <!-- contact js -->
-<script src="./assets/js/contact.js"></script>
-<script src="./assets/js/jquery.form.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/mail-script.js"></script>
-<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.form.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.validate.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
 
 <!-- Jquery Plugins, main Jquery -->	
-<script src="./assets/js/plugins.js"></script>
-<script src="./assets/js/main.js"></script>
+<script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
 </html>
