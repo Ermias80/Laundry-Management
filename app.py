@@ -16,10 +16,24 @@ db_config = {
 # Connect to MySQL
 def get_db_connection():
     return mysql.connector.connect(**db_config)
+
 @app.route('/')
 def index():
      return render_template("index.html")
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
  
+@app.route('/services')
+def services():
+    return render_template('services.html')
+
+@app.route('/admin')
+def admin():
+    return render_template('Admin.html')
+
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -71,9 +85,9 @@ def login():
 
     return render_template('sign_in.html')
 
-@app.route('/dashboard')
+@app.route('/order_page')
 def dashboard():
-    return 'Welcome to your dashboard!'
+    return render_template('order_page.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
