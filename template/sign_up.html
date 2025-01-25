@@ -65,7 +65,7 @@
         <!-- Registration Form -->
 <div class="register-container" id="register">
     <div class="top">
-        <span>Have an account? <a href="sign_in.html">Login</a></span>
+        <span>Have an account? <a href="{{ url_for('login') }}">Login</a></span>
         <h2>Sign Up</h2>
     </div>
     <form action="/register" method="POST">
