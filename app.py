@@ -15,11 +15,10 @@ app.secret_key = os.environ.get('SECRET_KEY', 'default_secret_key')
 def get_db_connection():
     try:
         conn = mysql.connector.connect(
-            host=os.getenv('DB_HOST', 'localhost'),
-            user=os.getenv('DB_USER', 'root'),
-            password=os.getenv('DB_PASSWORD', 'M12345m?'),
-            database=os.getenv('DB_NAME', 'Laundery_managemen7'),
-            port=int(os.getenv('DB_PORT', 3306))
+            host=os.getenv('DB_HOST'),
+            user=os.getenv('DB_USER'),
+            password=os.getenv('DB_PASSWORD'),
+            database=os.getenv('DB_NAME'),
         )
         return conn
     except mysql.connector.Error as e:
@@ -178,6 +177,5 @@ def check_connection():
     else:
         return "Database connection failed."
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
