@@ -20,9 +20,9 @@
 
 Laundery management system is a web-based platform designed to streamline the process of managing and accessing laundry services for both users and service providers. The platform aims to simplify the laundry process by providing a user-friendly interface and efficient environment where service providers can list their services and users can easily find and connect with them.
 
-* **Deployed Site:** [Your Home](https://your-home-slai.onrender.com/ "Your Home")
+* **Deployed Site:** [Laundry-Management](/ "Laundry-Management")
 
-![](https://github.com/mahari9/Your-home/blob/master/screenshot/Urhome-landing-page.png)
+![](https://github.com/Ermias80/Laundry-Management/blob/master/static/img/gallery/27.01.2025_00.21.20_REC.png)
 
 ### Live Demo
 * [Live Demo](https://www.youtube.com/watch?v=Up7-tsUwmfA "Live Demo")
@@ -139,6 +139,6 @@ We believe Your Home has the potential to transform the housing industry and loo
 Your Home Web Application is currently under development and not licensed for public use. 
 ### More Screenshots
 
-![](https://github.com/Ermias80/Laundry-Management/static/img/gallery/27.01.2025_00.21.20_REC.png)
+![](https://github.com/Ermias80/Laundry-Management/blob/master/static/img/gallery/27.01.2025_00.21.20_REC.png)
 
-![](https://github.com/Ermias80/Laundry-Management/static/img/gallery/scrn2.png)
+![](https://github.com/Ermias80/Laundry-Management/blob/master/static/img/gallery/scrn2.png)
