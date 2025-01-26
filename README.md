@@ -25,7 +25,7 @@ Laundery management system is a web-based platform designed to streamline the pr
 ![](https://github.com/mahari9/Your-home/blob/master/screenshot/Urhome-landing-page.png)
 
 ### Live Demo
-* [Live Demo](https://youtu.be/L62O7AuXT7E "Live Demo")
+* [Live Demo](https://www.youtube.com/watch?v=Up7-tsUwmfA "Live Demo")
 
 ### Features
 * **Authentication and Authorization:**
@@ -58,10 +58,10 @@ Laundery management system is a web-based platform designed to streamline the pr
 
 ### Technologies
 
-* React
-* MongoDB
-* Express
-* Node.js
+* Python
+* MYSQL
+* Flask
+* javascript, CSS HTML
 * Git
 
 ### How to Use
@@ -84,18 +84,18 @@ To run and access fullstack application:
 
 
 * **Access the application:**
-    * Open your web browser and go to `http://localhost:1245/`
+    * Open your web browser and go to ``
 
 **To run and access only client side or server side:**
   * **See:**
-    * [For Client Side](https://github.com/mahari9/Your-home/blob/master/client-side/README.md "For Client Side")
-    * [For Server Side](https://github.com/mahari9/Your-home/blob/master/server-side/README.md "For Server Side")
+    * [For Client Side and admin side](https://github.com/Ermias80/Laundry-Management/blob/master/README.md "For Client Side and admin side")
+    * 
 
 **Note:** First you have to setup environmental variables(MONGODB_LINK, MONGODB_PASSWORD, JWT_SECRET, JWT_EXPIRES_IN and PORT) qnd run $ `npm install` in both client-side and server-side directories. 
 
 #### Visiting the Live Website
 
-* 1\. **Visit the Your Home website:** [Your Home](https://your-home-slai.onrender.com "Your Home")
+* 1\. **Visit the Your Home website:** [Your Home]( "Your Home")
 * 2\. **Explore Lists:** You can explore listings without registration, but for more actions, proceed to step 3.
 * 3\. **Create an Account or Log In:** Create a new account or log in if you already have one.
 * 4\. **Once Logged In:** Follow the user guide and explore all the features.
@@ -112,14 +112,14 @@ We're excited to welcome contributions to the Your-home Portfolio Project. Hereâ
 * 6\. **Create a Pull Request:** Submit a pull request to merge your changes into the main repository.
 
 ### Project Blog 
-* [Blog Post](https://medium.com/@mahari9/your-home "Blog Post")
+* [Blog Post]( "Blog Post")
 ### Test Plan
 
 ### Authors
-* Mahari Tsegay - [Linkedin](https://www.linkedin.com/in/mahari-tsegay-22376524a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "Linkedin")
+* Ermias Mazengia - [Linkedin](https://www.linkedin.com/in/ermias-mazengia-0a22bb1b2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BD10ZYT5USSWA90GaZxW8Tg%3D%3D "Linkedin")
 ### Licensing
-Your Home Web Application is currently under development and not licensed for public use. 
-The Your Home Web Application Test Plan aims to ensure the seamless functionality, performance, and user experience of our platform. See This [document](https://github.com/mahari9/Your-home/tree/master/docs "document") that outlines the testing strategy, environment, schedule, and specific test cases for both server-side and client-side components.
+Your web based Laudery Managaement system Application is currently under development and not licensed for public use. 
+The web based Laudery Managaement system Test Plan aims to ensure the seamless functionality, performance, and user experience of our platform. See This [document](https://github.com/Ermias80/Laundry-Management/tree/master "document") that outlines the testing strategy, environment, schedule, and specific test cases for both server-side and client-side components.
 
 ### Future Development
 
@@ -132,25 +132,13 @@ We are actively working on expanding the Your Home Web Application platform by i
 We believe Your Home has the potential to transform the housing industry and look forward to sharing our progress with you!
 
 ### Project Blog 
-* [Blog Post](https://medium.com/@mahari9/your-home "Blog Post")
+* [Blog Post]( "Blog Post")
 ### Authors
-* Mahari Tsegay - [Linkedin](https://www.linkedin.com/in/mahari-tsegay-22376524a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "Linkedin")
+* Ermias Mazengia - [Linkedin](https://www.linkedin.com/in/ermias-mazengia-0a22bb1b2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BD10ZYT5USSWA90GaZxW8Tg%3D%3D "Linkedin")
 ### Licensing
 Your Home Web Application is currently under development and not licensed for public use. 
 ### More Screenshots
 
-![](https://github.com/mahari9/Your-home/blob/master/screenshot/urhome-dashboard.png)
+![](https://github.com/Ermias80/Laundry-Management/static/img/gallery/27.01.2025_00.21.20_REC.png)
 
-![](https://github.com/mahari9/Your-home/blob/master/screenshot/urhome-register.png)
-
-![](https://github.com/mahari9/Your-home/blob/master/screenshot/urhome-explore-lists.png)
-
-![](https://github.com/mahari9/Your-home/blob/master/screenshot/urhome-modal.png)
-
-![](https://github.com/mahari9/Your-home/blob/master/screenshot/urhome-createpost.png)
-
-![](https://github.com/mahari9/Your-home/blob/master/screenshot/urhome-createpost1.png)
-
-![](https://github.com/mahari9/Your-home/blob/master/screenshot/urhome-profile.png)
-
-![](https://github.com/mahari9/Your-home/blob/master/screenshot/urhome-post-info.png)
+![](https://github.com/Ermias80/Laundry-Management/static/img/gallery/scrn2.png)
