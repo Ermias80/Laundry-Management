@@ -17,7 +17,7 @@ def get_db_connection():
         conn = mysql.connector.connect(
             host=os.getenv('DB_HOST', 'localhost'),
             user=os.getenv('DB_USER', 'root'),
-            password=os.getenv('DB_PASSWORD', ''),
+            password=os.getenv('DB_PASSWORD', 'M12345m?'),
             database=os.getenv('DB_NAME', 'Laundery_managemen7'),
             port=int(os.getenv('DB_PORT', 3306))
         )
@@ -25,6 +25,7 @@ def get_db_connection():
     except mysql.connector.Error as e:
         print("Error connecting to MySQL: {}".format(e))
         return None
+
 # Routes
 @app.route('/')
 def index():
@@ -74,8 +75,8 @@ def register():
 
             cursor = conn.cursor()
             cursor.execute(
-                "INSERT INTO user (first_name, last_name, email, password) VALUES (%s, %s, %s, %s)",
-                (first_name, last_name, email, hashed_password)
+                "INSERT INTO Users (name, email, password, role) VALUES (%s, %s, %s, %s)",
+                (f"{first_name} {last_name}", email, hashed_password, 'customer')  # Default to 'customer' role
             )
             conn.commit()
             flash('Registration successful! Please log in.', 'success')
@@ -105,7 +106,7 @@ def login():
                 return render_template('sign_in.html')
 
             cursor = conn.cursor(dictionary=True)
-            cursor.execute("SELECT * FROM user WHERE email = %s", (email,))
+            cursor.execute("SELECT * FROM Users WHERE email = %s", (email,))
             user = cursor.fetchone()
 
             if user and check_password_hash(user['password'], password):
@@ -132,12 +133,51 @@ def logout():
     flash('Logged out successfully.', 'success')
     return redirect(url_for('login'))
 
-@app.route('/order_page')
+@app.route('/order_page', methods=['GET', 'POST'])
 def order_page():
     if 'user_email' not in session:
         flash('Please log in to access the order page.', 'error')
         return redirect(url_for('login'))
+
+    if request.method == 'POST':
+        service_id = request.form.get('service_id')  # This could be a service selected from the list
+        order_date = request.form.get('order_date')
+        pickup_date = request.form.get('pickup_date')
+        delivery_date = request.form.get('delivery_date')
+        total_amount = request.form.get('total_amount')  # Calculate this based on services
+
+        try:
+            conn = get_db_connection()
+            if not conn:
+                flash('Database connection failed.', 'error')
+                return redirect(url_for('order_page'))
+
+            cursor = conn.cursor()
+            cursor.execute(
+                "INSERT INTO Orders (user_id, order_date, pickup_date, delivery_date, total_amount, status) VALUES (%s, %s, %s, %s, %s, %s)",
+                (session['user_id'], order_date, pickup_date, delivery_date, total_amount, 'pending')
+            )
+            conn.commit()
+            flash('Order placed successfully!', 'success')
+            return redirect(url_for('order_page'))
+        except mysql.connector.Error as e:
+            flash("An error occurred: {}".format(str(e)), 'error')
+        finally:
+            if 'cursor' in locals():
+                cursor.close()
+            if 'conn' in locals():
+                conn.close()
+
     return render_template('order_page.html', user_email=session['user_email'])
+
+@app.route('/check_connection')
+def check_connection():
+    conn = get_db_connection()
+    if conn:
+        return "Database connection successful!"
+    else:
+        return "Database connection failed."
+
 
 if __name__ == '__main__':
     app.run(debug=True)
