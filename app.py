@@ -23,9 +23,8 @@ def get_db_connection():
         )
         return conn
     except mysql.connector.Error as e:
-        print(f"Error connecting to MySQL: {e}")
+        print("Error connecting to MySQL: {}".format(e))
         return None
-
 # Routes
 @app.route('/')
 def index():
@@ -84,7 +83,7 @@ def register():
         except mysql.connector.IntegrityError:
             flash('Email is already registered. Please log in.', 'error')
         except mysql.connector.Error as e:
-            flash(f"An error occurred: {str(e)}", 'error')
+            flash("An error occurred: {}".format(str(e)), 'error')
         finally:
             if 'cursor' in locals():
                 cursor.close()
@@ -118,7 +117,7 @@ def login():
             else:
                 flash('Invalid email or password.', 'error')
         except mysql.connector.Error as e:
-            flash(f"An error occurred: {str(e)}", 'error')
+                flash("An error occurred: {}".format(str(e)), 'error')
         finally:
             if 'cursor' in locals():
                 cursor.close()
