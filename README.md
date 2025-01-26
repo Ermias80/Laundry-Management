@@ -37,24 +37,24 @@ Laundery management system is a web-based platform designed to streamline the pr
     * Clicking bloge button  on the heading it will shaw user or Admin buttons .
 
 * **Property Search and Filtering:**
-    * Search for properties using the search input.
-    * Filter properties by:
+    * Search for orders using the search input.
+    * Filter orders by:
       * price
-      * post type (selling or renting)
-      * property type (house or apartment)
-      * and location.
+      * Service type (washing, dry cleaning, ironing, etc.)
+      * Order status (pending, in progress, completed, delivered)
+      * Location (pickup and delivery address)
 
-* **Post Assessment:**
-    * Inspect specific posts.
-    * View all active posts and successfully sold properties of users/agencies.
+* **Order Inspection::**
+    * Inspect specific orders in detail.
+    * View all active orders and successfully completed orders.
 
 * **Rating:**
-    * Rate users or agencies.
+    * Rate the service quality provided by the laundry business or specific staff.
 
-* **Post Management:**
-    * Create a post (you must select the building's location on the map).
-    * Delete a post.
-    * Label a property as sold/rented, classifying it as successfully sold/rented
+* **Order Management:**
+    * Create an order (customers can select laundry services, upload items, and set preferences).
+    * Delete an order (if not processed yet).
+    * Mark an order as completed/delivered, classifying it as successfully processed.
 
 ### Technologies
 
@@ -68,7 +68,7 @@ Laundery management system is a web-based platform designed to streamline the pr
 
 #### Setting Up
 
-To clone Your Home locally, follow these steps:
+To clone Your Laundery management, follow these steps:
 
 1\. **Clone the repository:**
 
@@ -91,11 +91,11 @@ To run and access fullstack application:
     * [For Client Side and admin side](https://github.com/Ermias80/Laundry-Management/blob/master/README.md "For Client Side and admin side")
     * 
 
-**Note:** First you have to setup environmental variables(MONGODB_LINK, MONGODB_PASSWORD, JWT_SECRET, JWT_EXPIRES_IN and PORT) qnd run $ `npm install` in both client-side and server-side directories. 
+**Note:** First you have to setup environmental variables(MYSQL_LINK, MYSQL_PASSWORD, JWT_SECRET, JWT_EXPIRES_IN and PORT) qnd run $ `npm install` in both client-side and server-side directories. 
 
 #### Visiting the Live Website
 
-* 1\. **Visit the Your Home website:** [Your Home]( "Your Home")
+* 1\. **Visit the Your Laundery management website:** [Laundery management]( "Laundery management")
 * 2\. **Explore Lists:** You can explore listings without registration, but for more actions, proceed to step 3.
 * 3\. **Create an Account or Log In:** Create a new account or log in if you already have one.
 * 4\. **Once Logged In:** Follow the user guide and explore all the features.
@@ -123,20 +123,20 @@ The web based Laudery Managaement system Test Plan aims to ensure the seamless f
 
 ### Future Development
 
-We are actively working on expanding the Your Home Web Application platform by implementing additional features such as:
+We are actively working on expanding the Your Laundery management Application platform by implementing additional features such as:
 
 * Add live chat feature for better communication between users
 * Advanced third-party payment API system for subscribers to pay easily
 * Add a feature that allows users or agents to update or edit their posts
 
-We believe Your Home has the potential to transform the housing industry and look forward to sharing our progress with you!
+We believe our Laundery management has the potential to transform the housing industry and look forward to sharing our progress with you!
 
 ### Project Blog 
 * [Blog Post]( "Blog Post")
 ### Authors
 * Ermias Mazengia - [Linkedin](https://www.linkedin.com/in/ermias-mazengia-0a22bb1b2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BD10ZYT5USSWA90GaZxW8Tg%3D%3D "Linkedin")
 ### Licensing
-Your Home Web Application is currently under development and not licensed for public use. 
+our Laundery management web Application is currently under development and not licensed for public use. 
 ### More Screenshots
 
 ![](https://github.com/Ermias80/Laundry-Management/blob/master/static/img/gallery/27.01.2025_00.21.20_REC.png)
