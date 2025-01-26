@@ -102,7 +102,7 @@ To run and access fullstack application:
 
 ### Contributing
 
-We're excited to welcome contributions to the Your-home Portfolio Project. Here’s how you can get involved:
+We're excited to welcome contributions to the Laundery management Portfolio Project. Here’s how you can get involved:
 
 * 1\. **Fork the Repository:** Create your own copy of the repository by forking it. 
 * 2\. **Create a New Branch:** Use the command git checkout -b feature/improvement to create a new branch for your changes.
