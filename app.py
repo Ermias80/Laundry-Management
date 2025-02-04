@@ -11,7 +11,7 @@ load_dotenv()
 app = Flask(__name__, template_folder='template', static_folder='static')
 app.secret_key = os.environ.get('SECRET_KEY', 'default_secret_key')
 
-# SQLTools Connection Configuration
+# Database Connection Configuration
 def get_db_connection():
     try:
         conn = mysql.connector.connect(
@@ -117,7 +117,7 @@ def login():
             else:
                 flash('Invalid email or password.', 'error')
         except mysql.connector.Error as e:
-                flash("An error occurred: {}".format(str(e)), 'error')
+            flash("An error occurred: {}".format(str(e)), 'error')
         finally:
             if 'cursor' in locals():
                 cursor.close()
